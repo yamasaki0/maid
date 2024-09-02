@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  teble_id: 1
+  menu_id: 1
+  qty: 1
+  memo: MyText
+
+two:
+  teble_id: 1
+  menu_id: 1
+  qty: 1
+  memo: MyText
