@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  root to: 'homes#index'
   resources :reservations
   resources :menus
   resources :orders

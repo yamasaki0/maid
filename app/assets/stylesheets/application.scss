@@ -1,1 +1,108 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&display=swap');
+
+$top-color: rgb(91, 16, 46);
+$base-color: rgb(26, 26, 60);
+$light-color: rgb(255, 248, 232);
+
+.deco-font,
+h1 {
+    font-family: "Kaisei Decol", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: $base-color;
+}
+
+.base-color {
+    color: $base-color
+}
+
+.top-color {
+    color: $base-color
+}
+
+.light-color {
+    color: $light-color
+}
+
+.base-bg-color {
+    background-color: $base-color
+}
+
+.top-bg-color {
+    background-color: $top-color
+}
+
+.light-bg-color {
+    background-color: $light-color
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light:active:focus,
+.btn-light:active:hover,
+.btn-light:active.focus,
+.btn-light.active,
+.btn-light.active:focus,
+.btn-light.active:hover,
+.btn-light.active.focus,
+.open>.dropdown-toggle.btn-light,
+.open>.dropdown-toggle.btn-light:hover,
+.open>.dropdown-toggle.btn-light:focus,
+.open>.dropdown-toggle.btn-light.focus,
+.btn-light.disabled:hover,
+.btn-light[disabled]:hover,
+fieldset[disabled] .btn-light:hover,
+.btn-light.disabled:focus,
+.btn-light[disabled]:focus,
+fieldset[disabled] .btn-light:focus,
+.btn-light.disabled.focus,
+.btn-light[disabled].focus,
+fieldset[disabled] .btn-light.focus {
+    background: $top-color; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: $light-color;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark:active:focus,
+.btn-dark:active:hover,
+.btn-dark:active.focus,
+.btn-dark.active,
+.btn-dark.active:focus,
+.btn-dark.active:hover,
+.btn-dark.active.focus,
+.open>.dropdown-toggle.btn-dark,
+.open>.dropdown-toggle.btn-dark:hover,
+.open>.dropdown-toggle.btn-dark:focus,
+.open>.dropdown-toggle.btn-dark.focus,
+.btn-dark.disabled:hover,
+.btn-dark[disabled]:hover,
+fieldset[disabled] .btn-dark:hover,
+.btn-dark.disabled:focus,
+.btn-dark[disabled]:focus,
+fieldset[disabled] .btn-dark:focus,
+.btn-dark.disabled.focus,
+.btn-dark[disabled].focus,
+fieldset[disabled] .btn-dark.focus {
+    background: $base-color; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
+    color: $light-color;
+}
+
+/* ハンバーガーメニューのスタイリング */
+.navbar-toggler {
+    // ハンバーガーメニューの外枠を無色透明にする
+    border-color: rgba(0, 0, 0, 0);
+
+    // ハンバーガーメニューをクリックした後に表示される枠線を消す
+    &:focus {
+        box-shadow: none !important;
+    }
+
+    // ハンバーガーメニューの３本線のスタイリング
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}

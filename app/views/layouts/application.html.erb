@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <head>
-    <title><%= content_for(:title) || "Maid" %></title>
+    <title>まいどありメイドさん！</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= yield :head %>
-
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -16,7 +17,26 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand deco-font light-color" href="/">まいどありメイドさん！</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li><%= link_to "ホーム", root_path, class: "nav-link btn btn-sm btn-light deco-font light-color", method: :delete %></li>
+            <li><%= link_to "オーダー", orders_path, class: "nav-link btn btn-sm btn-light deco-font light-color", method: :delete %></li>
+            <li><%= link_to "テーブル", tables_path, class: "nav-link btn btn-sm btn-light deco-font light-color", method: :delete %></li>
+            <li><%= link_to "メニュー", menus_path, class: "nav-link btn btn-sm btn-light deco-font light-color", method: :delete %></li>
+            <li><%= link_to "予約", reservations_path, class: "nav-link btn btn-sm btn-light deco-font light-color", method: :delete %></li>
+            <li><%= link_to "設定", root_path, class: "nav-link btn btn-sm btn-light deco-font light-color", method: :delete %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <body>
     <%= yield %>
   </body>
